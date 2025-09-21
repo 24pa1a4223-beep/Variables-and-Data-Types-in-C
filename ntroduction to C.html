@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to C</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #2a7f62;
+      margin-top: 25px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      border-bottom: 3px solid #2a7f62;
+      padding-bottom: 5px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #2a7f62;
+      color: #fff;
+      padding: 10px;
+    }
+    td {
+      padding: 10px;
+    }
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+    .note {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+    .example {
+      background-color: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Introduction to C Programming</h1>
+
+    <h2>1. What is C?</h2>
+    <p>C is a <strong>general-purpose, high-level programming language</strong> developed by <strong>Dennis Ritchie</strong> at Bell Labs in 1972. It is widely regarded as the foundation of modern programming languages like C++, Java, and Python.</p>
+    <p>C is both high-level and low-level, meaning:</p>
+    <ul>
+      <li>High-level: Easy to write programs using structured syntax</li>
+      <li>Low-level: Allows direct access to memory and system hardware</li>
+    </ul>
+
+    <h2>2. History of C</h2>
+    <ul>
+      <li>1969: Development of <strong>B language</strong> by Ken Thompson</li>
+      <li>1972: C developed by Dennis Ritchie</li>
+      <li>1978: First book "The C Programming Language" by Kernighan & Ritchie</li>
+      <li>1989: ANSI standardized C (ANSI C)</li>
+      <li>1990s: ISO standardized C (ISO C)</li>
+    </ul>
+    <div class="note">
+      Today, C is still widely used in system programming, embedded systems, and performance-critical applications.
+    </div>
+
+    <h2>3. Features of C</h2>
+    <ul>
+      <li>Simple – Easy to learn and understand</li>
+      <li>Structured – Supports modular programming with functions</li>
+      <li>Portable – Programs can run on different machines with minimal changes</li>
+      <li>Efficient – Provides fast execution and low memory overhead</li>
+      <li>Rich Library – Built-in functions for I/O, math, and strings</li>
+      <li>Low-Level Access – Pointers allow direct memory management</li>
+      <li>Extensible – Can integrate with assembly code</li>
+    </ul>
+
+    <h2>4. Why Learn C?</h2>
+    <ul>
+      <li>Forms the basis for learning other languages like C++, Java, Python</li>
+      <li>Essential for system-level programming (OS, drivers)</li>
+      <li>Widely used in embedded systems (IoT, microcontrollers)</li>
+      <li>Helps understand memory management and computer architecture</li>
+    </ul>
+
+    <h2>5. Applications of C</h2>
+    <table>
+      <tr>
+        <th>Domain</th>
+        <th>Usage</th>
+      </tr>
+      <tr>
+        <td>System Programming</td>
+        <td>Operating Systems, Compilers</td>
+      </tr>
+      <tr>
+        <td>Embedded Systems</td>
+        <td>Microcontrollers, IoT devices</td>
+      </tr>
+      <tr>
+        <td>Game Development</td>
+        <td>Game engines, graphics rendering</td>
+      </tr>
+      <tr>
+        <td>Database Systems</td>
+        <td>MySQL, Oracle (core written in C)</td>
+      </tr>
+      <tr>
+        <td>Compiler Design</td>
+        <td>GCC, LLVM</td>
+      </tr>
+      <tr>
+        <td>Networking</td>
+        <td>TCP/IP stack, network drivers</td>
+      </tr>
+    </table>
+
+    <h2>6. Structure of a C Program</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+    </pre>
+    <div class="note">
+      <strong>Explanation:</strong><br>
+      - <code>#include &lt;stdio.h&gt;</code> – Includes Standard Input Output library<br>
+      - <code>int main()</code> – Entry point of the program<br>
+      - <code>printf()</code> – Function to display output<br>
+      - <code>return 0;</code> – Signals successful termination
+    </div>
+
+    <h2>7. Steps to Run a C Program</h2>
+    <ul>
+      <li>Write code in a text editor</li>
+      <li>Compile using a compiler (e.g., GCC)</li>
+      <li>Execute the compiled program</li>
+    </ul>
+
+    <h2>8. Types of C Programs</h2>
+    <ul>
+      <li>Console-based programs – Text output</li>
+      <li>File handling programs – Read/write files</li>
+      <li>System-level programs – OS, device drivers</li>
+      <li>Embedded programs – Microcontroller software</li>
+    </ul>
+
+    <h2>9. Hello World Example</h2>
+    <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+    </pre>
+
+    <h2>10. Advantages of C</h2>
+    <ul>
+      <li>Fast and efficient</li>
+      <li>Portable across platforms</li>
+      <li>Structured approach for debugging</li>
+      <li>Supports modular programming</li>
+      <li>Large community support</li>
+    </ul>
+
+    <h2>11. Disadvantages of C</h2>
+    <ul>
+      <li>No built-in string or boolean type</li>
+      <li>Manual memory management (can cause errors)</li>
+      <li>No support for Object-Oriented Programming</li>
+    </ul>
+
+    <h2>12. Key Takeaways</h2>
+    <ul>
+      <li>C is a foundational language for modern programming</li>
+      <li>Combines low-level memory access and high-level syntax</li>
+      <li>Essential for system programming, embedded systems, and performance-critical apps</li>
+    </ul>
+
+  </div>
+</body>
+</html>
