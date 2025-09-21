@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variables and Data Types in C</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 25px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #2a7f62;
+      margin-top: 25px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      border-bottom: 3px solid #2a7f62;
+      padding-bottom: 5px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #2a7f62;
+      color: #fff;
+      padding: 10px;
+    }
+    td {
+      padding: 10px;
+    }
+    ul {
+      margin: 10px 0 10px 20px;
+    }
+    .note {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+    .example {
+      background-color: #e8f5e9;
+      border-left: 5px solid #4caf50;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Variables and Data Types in C</h1>
+
+    <h2>1. What is a Variable?</h2>
+    <p>A <strong>variable</strong> is a named storage location in memory that holds data during program execution. Each variable has a name, a data type, and a memory location.</p>
+    <p><strong>Syntax:</strong></p>
+    <pre>data_type variable_name = value;</pre>
+
+    <div class="example">
+      <strong>Example:</strong>
+      <pre>
+int age = 20;
+float height = 5.9;
+char grade = 'A';
+      </pre>
+    </div>
+
+    <div class="note">
+      <strong>Notes:</strong><br>
+      - Variables are case-sensitive.<br>
+      - Cannot use C keywords as variable names.<br>
+      - Can start with a letter or underscore and contain letters, digits, or underscores.
+    </div>
+
+    <h2>2. Data Types in C</h2>
+    <p>C is a statically typed language; every variable must have a data type defined at compile time.</p>
+
+    <h3>2.1 Primary Data Types</h3>
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Description</th>
+        <th>Size (typical)</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>int</td>
+        <td>Integer numbers</td>
+        <td>2–4 bytes</td>
+        <td>int a = 10;</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>Single-precision floating-point</td>
+        <td>4 bytes</td>
+        <td>float f = 5.5;</td>
+      </tr>
+      <tr>
+        <td>double</td>
+        <td>Double-precision floating-point</td>
+        <td>8 bytes</td>
+        <td>double d = 3.14159;</td>
+      </tr>
+      <tr>
+        <td>char</td>
+        <td>Single character</td>
+        <td>1 byte</td>
+        <td>char c = 'A';</td>
+      </tr>
+      <tr>
+        <td>void</td>
+        <td>No data / no return value</td>
+        <td>0</td>
+        <td>void func();</td>
+      </tr>
+    </table>
+
+    <h3>2.2 Derived Data Types</h3>
+    <ul>
+      <li>Arrays – Collection of same-type elements</li>
+      <li>Pointers – Store memory address of a variable</li>
+      <li>Structures – Group of different data types</li>
+      <li>Unions – Store different data types in same memory</li>
+    </ul>
+
+    <h3>2.3 User-Defined Data Types</h3>
+    <ul>
+      <li>typedef – Define custom type names</li>
+      <li>enum – Set of named integer constants</li>
+    </ul>
+    <pre>
+typedef unsigned int uint;
+enum Days {MON, TUE, WED};
+    </pre>
+
+    <h3>2.4 Modifiers</h3>
+    <table>
+      <tr>
+        <th>Modifier</th>
+        <th>Description</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>signed</td>
+        <td>Can store positive & negative</td>
+        <td>signed int x = -10;</td>
+      </tr>
+      <tr>
+        <td>unsigned</td>
+        <td>Only positive values</td>
+        <td>unsigned int y = 10;</td>
+      </tr>
+      <tr>
+        <td>short</td>
+        <td>Smaller size</td>
+        <td>short int a = 100;</td>
+      </tr>
+      <tr>
+        <td>long</td>
+        <td>Larger size</td>
+        <td>long int b = 100000;</td>
+      </tr>
+    </table>
+
+    <h2>3. Constants in C</h2>
+    <p>Constants are fixed values that cannot change during program execution.</p>
+    <pre>const int MAX = 100;</pre>
+    <pre>#define PI 3.1416</pre>
+
+    <h2>4. Type Casting in C</h2>
+    <p>Convert a variable from one type to another.</p>
+    <pre>
+int x = 5;
+float y = x;      // Implicit casting
+float f = 5.9;
+int a = (int)f;   // Explicit casting
+    </pre>
+
+    <h2>5. Example Programs</h2>
+    <div class="example">
+      <pre>
+#include &lt;stdio.h&gt;
+int main() {
+    int age = 20;
+    float height = 5.9;
+    char grade = 'A';
+    printf("Age: %d, Height: %.1f, Grade: %c\n", age, height, grade);
+    return 0;
+}
+      </pre>
+    </div>
+    <h2>6. Summary Table</h2>
+<table>
+  <tr>
+    <th>Concept</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Variable</td>
+    <td>Named memory location to store data</td>
+  </tr>
+  <tr>
+    <td>Data Type</td>
+    <td>Type of value variable can hold</td>
+  </tr>
+  <tr>
+    <td>Basic Types</td>
+    <td>int, float, double, char, void</td>
+  </tr>
+  <tr>
+    <td>Derived Types</td>
+    <td>Array, pointer, structure, union</td>
+  </tr>
+  <tr>
+    <td>User-defined</td>
+    <td>typedef, enum</td>
+  </tr>
+  <tr>
+    <td>Constants</td>
+    <td>Fixed values that do not change</td>
+  </tr>
+  <tr>
+    <td>Type Casting</td>
+    <td>Conversion from one type to another</td>
+  </tr>
+  <tr>
+    <td>Modifiers</td>
+    <td>short, long, signed, unsigned</td>
+  </tr>
+</table>
+
+
+    <div class="note">
+      <strong>Best Practices:</strong><br>
+      - Use meaningful variable names<br>
+      - Initialize variables before use<br>
+      - Use const for constants<br>
+      - Avoid magic numbers; use macros/constants
+    </div>
+  </div>
+</body>
+</html>
